@@ -40,6 +40,18 @@ const UserSchema = new mongoose.Schema({
     type: Date,
     required: true,
   },
+  personalInfo: {
+    dob: { type: Date },
+    gender: { type: String, enum: ["Male", "Female", "Other"] },
+    fatherName: { type: String },
+    address: {
+      line1: String,
+      line2: String,
+      city: String,
+      state: String,
+      pincode: String,
+    },
+  },
   gst: [],
   it: [],
   audit: [],
